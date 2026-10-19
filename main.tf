@@ -26,6 +26,10 @@ variable "subnets" {
       az   = "ap-southeast-1b"
       cidr = "10.10.12.0/24"
     }
+    private-d = {
+      az   = "ap-southeast-1b"
+      cidr = "10.10.14.0/24"
+    }
   }
 }
 
@@ -34,7 +38,7 @@ locals {
     Project     = "infra-learning"
     Environment = var.environment
     ManagedBy   = "Terraform"
-  } 
+  }
 }
 
 module "naming" {
