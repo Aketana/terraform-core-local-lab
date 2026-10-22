@@ -11,24 +11,29 @@ variable "subnets" {
   type = map(object({
     az   = string
     cidr = string
+    tier = string
   }))
 
   default = {
     public-a = {
       az   = "ap-southeast-1a"
       cidr = "10.10.1.0/24"
+      tier = "public"
     }
     private-a = {
       az   = "ap-southeast-1a"
       cidr = "10.10.11.0/24"
+      tier = "private"
     }
     private-b = {
       az   = "ap-southeast-1b"
       cidr = "10.10.12.0/24"
+      tier = "private"
     }
     private-d = {
       az   = "ap-southeast-1b"
       cidr = "10.10.14.0/24"
+      tier = "private"
     }
   }
 }
